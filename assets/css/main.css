@@ -2529,12 +2529,17 @@ section#first header.major h2:after {
   transition: opacity 1.25s ease, transform 0.5s ease;
   transition-delay: 0s;
   display: block;
-  margin: 0 0 1.5em 0;
+  /* Reduced bottom margin slightly for better balance with the name */
+  margin: 0 0 1em 0; 
 }
 #header.alt .logo img {
   display: block;
   margin: 0 auto;
-  max-width: 75%;
+  /* Force a fixed size to match your 6rem tech icons */
+  width: 5.5rem; 
+  height: auto;
+  /* Removes the 75% rule that was making it huge */
+  max-width: none; 
 }
 @media screen and (max-width: 1280px) {
   #header {
