@@ -26,18 +26,23 @@
 		}
 
 		.image {
-			border-radius: 8px !important;
+					display: inline-block;
+					margin-left: 4em;
+					padding: 0.65em;
+					border-radius: 8px !important; // Makes spotlight images square
+					border: solid 1px;
 
-			// This targets that white "outer frame"
-			&::after {
-				border-radius: 8px !important;
-			}
+					&::after {
+						border-radius: 8px !important; // Targets the outer frame
+					}
 
-			img {
-				border-radius: 8px !important;
-				clip-path: none !important;
-			}
-		}
+					img {
+						display: block;
+						border-radius: 8px !important; 
+						width: 20em;
+						clip-path: none !important;
+					}
+				}
 
 		@include breakpoint('<=medium') {
 			@include vendor('flex-direction', 'column-reverse');
