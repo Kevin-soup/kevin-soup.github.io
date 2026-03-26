@@ -26,16 +26,16 @@
 		}
 
 		.image {
-			display: inline-block;
-			margin-left: 4em;
-			padding: 0.65em;
-			border-radius: 100%;
-			border: solid 1px;
+			border-radius: 8px !important;
+
+			// This targets that white "outer frame"
+			&::after {
+				border-radius: 8px !important;
+			}
 
 			img {
-				display: block;
-				border-radius: 100%;
-				width: 16em;
+				border-radius: 8px !important;
+				clip-path: none !important;
 			}
 		}
 
