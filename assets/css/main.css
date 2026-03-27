@@ -2273,19 +2273,23 @@ table.alt tbody tr td {
     margin-top: 3em;
   }
 }
-@media screen and (max-width: 736px) {
-  .features {
-    width: 100%;
+.features li .image.fit {
     margin: 0 0 2em 0;
-  }
-  .features li {
+    display: block;
     width: 100%;
-    margin-left: 0;
-    margin-top: 2em;
-  }
-  .features li:nth-child(2), .features li:nth-child(3) {
-    margin-top: 2em;
-  }
+}
+.features li .image.fit img {
+    display: block;
+    width: 100% !important;
+    height: 15em !important; 
+    object-fit: cover !important; 
+    object-position: top; 
+    border-radius: 8px; 
+}
+@media screen and (max-width: 736px) {
+    .features li .image.fit img {
+        height: 12em !important; 
+    }
 }
 
 /* Statistics */

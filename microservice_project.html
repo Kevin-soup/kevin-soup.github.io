@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Database Management System</title>
+		<title>Microservice Catalog App</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,8 +19,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Retail Database System</h1>
-						<p>Node.js | Express | MySQL</p>
+						<h1>Microservice Catalog App</h1>
+						<p>MongoDB | Express | React | Node.js</p>
 					</header>
 
 				<!-- Main -->
@@ -31,54 +31,69 @@
 								<div class="row gtr-50 gtr-uniform">
 									<div class="col-6 col-12-xsmall">
 										<span class="_project_display">
-											<img src="images/database_home.png" alt="Database Interface" />
+											<img src="images/page1.png" alt="Database Interface" />
 										</span>
 									</div>
 									<div class="col-6 col-12-xsmall">
 										<span class="_project_display">
-											<img src="images/table.png" alt="Database Schema" />
+											<img src="images/catalog.png" alt="Database Schema" />
 										</span>
 									</div>
-																		<div class="col-6 col-12-xsmall">
+									<div class="col-6 col-12-xsmall">
 										<span class="_project_display">
-											<img src="images/ddl_code.png" alt="Database Schema" />
+											<img src="images/microservice_diagram.png" alt="Database Schema" />
 										</span>
 									</div>
-																		<div class="col-6 col-12-xsmall">
+									<div class="col-6 col-12-xsmall">
 										<span class="_project_display">
-											<img src="images/schema.png" alt="Database Schema" />
+											<img src="images/admin.png" alt="Database Schema" />
 										</span>
 									</div>
-								</div>							
-								<h2>Retail Database System: Rainbow Sunglasses</h2>
+								</div>			
+								<p></p>							
+								<h2>Microservice SPA: MERN Stack</h2>
 								<p>
-									Rainbow Sunglasses Management System is a full-stack web application engineered to 
-										streamline the operations of a retail sunglasses business. The system provides a 
-										centralized platform for managing complex relational data across five core business 
-										entities, ensuring data integrity and efficient inventory tracking.
+									The Microservice Catalog App is a full stack distributed system featuring a React UI 
+									and four decoupled Node.js/Express microservices. The communication occurs via a RESTful 
+									HTTP/JSON interface, leveraging MongoDB for NoSQL data persistence and service logic.
 									<br />
 									<br />
-									The application allows users to browse data, create new records, update existing records, delete applicable records, 
-										and reset the database to its original sample data state. The project demonstrates relational database design, 
-										CRUD operations, implementation of a many to many relationship, and deployment of a working database backed website.
+									The application provides a comprehensive suite for browsing, creating, updating, and 
+									deleting records with real-time database synchronization. This project demonstrates 
+									distributed system design, NoSQL data modeling, and the implementation of independent 
+									service communication within a containerized ecosystem.
 								</p>
-
-								<h2>Core Entities & Data Modeling</h2>
+								<h2>Architecture Overview</h2>
 								<ul>
-									<li><strong>Customers:</strong> Maintains contact records and tracks historical purchase associations.</li>
-									<li><strong>Employees:</strong> Manages internal staff records and hire information.</li>
-									<li><strong>Invoices:</strong> Serves as the primary purchase record, establishing a relationship between 
-										customers and the fulfilling employee.</li>
-									<li><strong>Sunglasses:</strong> Tracks inventory specifics including price points, stock quantities, and 
-										sale status.</li>
-									<li><strong>InvoiceSunglasses (Intersection Table):</strong> Implements a <strong>many-to-many relationship</strong> 
-										to map specific inventory items to individual invoices.</li>
+									<li>
+										<strong>Announcement Banner - Microservice A:</strong> 
+										External integration providing standardized dynamic content. Consumed via REST API 
+										endpoints for seamless site-wide updates. 
+										<em>Author: Antonio E. Olaguer II.</em>
+									</li>
+									<li>
+										<strong>Token Authentication - Microservice B:</strong> 
+										Manages administrative authorization and protects sensitive operations. Implements 
+										secure token-based communication to restrict access to site promotions and product 
+										management.
+									</li>
+									<li>
+										<strong>MongoDB Image Service - Microservice C:</strong> 
+										Specifically optimized for high-resolution product imagery. Handles the upload pipeline 
+										and asset delivery to ensure low latency for image-heavy catalog views.
+									</li>
+									<li>
+										<strong>MongoDB Catalog - Microservice D:</strong> 
+										The core logic service for database integrity. Manages CRUD operations, including record 
+										addition, deletion, and categorical sorting to maintain real-time inventory data.
+									</li>
 								</ul>
 								<footer class="major">
 									<ul class="actions special">
 										<li><a href="index.html" class="button primary">Back to Home</a></li>
-										<li><a href="pdf/database.pdf" class="button">PDF</a></li>
-										<li><a href="https://github.com/Kevin-soup/Database_Management_System" class="button">GitHub</a></li>
+										<li><a href="pdf/microservice_intro.pdf" class="button">Intro</a></li>
+										<li><a href="pdf/microservice_ui.pdf" class="button">UI</a></li>
+										<li><a href="https://github.com/Kevin-soup/Microservice_Catalog_App" class="button">GitHub</a></li>
 									</ul>
 								</footer>								
 							</section>
