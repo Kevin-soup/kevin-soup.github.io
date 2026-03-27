@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Database Management System</title>
+		<title>TraceRoute Network Path</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,8 +19,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Retail Database System</h1>
-						<p>Node.js | Express | MySQL</p>
+						<h1>TraceRoute Network Path</h1>
+						<p>Python | Raw Sockets | ICMP</p>
 					</header>
 
 				<!-- Main -->
@@ -31,54 +31,62 @@
 								<div class="row gtr-50 gtr-uniform">
 									<div class="col-6 col-12-xsmall">
 										<span class="_project_display">
-											<img src="images/database_home.png" alt="Database Interface" />
+											<img src="images/google_ping.png" alt="Database Interface" />
 										</span>
 									</div>
 									<div class="col-6 col-12-xsmall">
 										<span class="_project_display">
-											<img src="images/table.png" alt="Database Schema" />
+											<img src="images/taiwan.png" alt="Database Schema" />
 										</span>
 									</div>
 																		<div class="col-6 col-12-xsmall">
 										<span class="_project_display">
-											<img src="images/ddl_code.png" alt="Database Schema" />
+											<img src="images/traceroute.png" alt="Database Schema" />
 										</span>
 									</div>
 																		<div class="col-6 col-12-xsmall">
 										<span class="_project_display">
-											<img src="images/schema.png" alt="Database Schema" />
+											<img src="images/icmp.png" alt="Database Schema" />
 										</span>
 									</div>
-								</div>							
-								<h2>Retail Database System: Rainbow Sunglasses</h2>
+								</div>
+								<p></p>							
+								<h2>TraceRoute: Network Diagnostic Tool</h2>
 								<p>
-									Rainbow Sunglasses Management System is a full-stack web application engineered to 
-										streamline the operations of a retail sunglasses business. The system provides a 
-										centralized platform for managing complex relational data across five core business 
-										entities, ensuring data integrity and efficient inventory tracking.
+									This TraceRoute tool extends a raw socket ICMP ping implementation to create a Traceroute diagnostic 
+									tool. The program sends ICMP echo requests with increasing Time-To-Live (TTL) values to identify 
+									the sequence of routers between the source host and a destination host.
 									<br />
 									<br />
-									The application allows users to browse data, create new records, update existing records, delete applicable records, 
-										and reset the database to its original sample data state. The project demonstrates relational database design, 
-										CRUD operations, implementation of a many to many relationship, and deployment of a working database backed website.
+									As packets travel through the network, routers return ICMP Time Exceeded messages when 
+									the TTL reaches zero. By collecting these responses, the program determines the path taken 
+									by packets and measures the round-trip time (RTT) for each hop.
 								</p>
 
-								<h2>Core Entities & Data Modeling</h2>
+								<h2>Error Validation & ICMP Handling</h2>
 								<ul>
-									<li><strong>Customers:</strong> Maintains contact records and tracks historical purchase associations.</li>
-									<li><strong>Employees:</strong> Manages internal staff records and hire information.</li>
-									<li><strong>Invoices:</strong> Serves as the primary purchase record, establishing a relationship between 
-										customers and the fulfilling employee.</li>
-									<li><strong>Sunglasses:</strong> Tracks inventory specifics including price points, stock quantities, and 
-										sale status.</li>
-									<li><strong>InvoiceSunglasses (Intersection Table):</strong> Implements a <strong>many-to-many relationship</strong> 
-										to map specific inventory items to individual invoices.</li>
+									<li>
+										<strong>Packet Validation:</strong> Ensures integrity by verifying ICMP Echo Replies against 
+										original request identifiers, sequence numbers, and raw data payloads.
+									</li>
+									<li>
+										<strong>Network Metrics:</strong> Calculates high-resolution round-trip time (RTT) statistics, 
+										including minimum, maximum, and average values, alongside real-time packet loss percentages.
+									</li>
+									<li>
+										<strong>ICMP Error Parsing:</strong> Implements a response handler for standard ICMP types and codes, 
+										diagnosing Echo Replies (Type 0), Destination Unreachable (Type 3), and Time Exceeded (Type 11).
+									</li>
+									<li>
+										<strong>System Integrity:</strong> Utilizes debug messaging to compare expected versus actual packet 
+										values, confirming the accuracy of received network data.
+									</li>
 								</ul>
 								<footer class="major">
 									<ul class="actions special">
 										<li><a href="index.html" class="button primary">Back to Home</a></li>
-										<li><a href="pdf/database.pdf" class="button">PDF</a></li>
-										<li><a href="https://github.com/Kevin-soup/Database_Management_System" class="button">GitHub</a></li>
+										<li><a href="pdf/traceroute.pdf" class="button">PDF</a></li>
+										<li><a href="https://github.com/Kevin-soup/TraceRoute_Network_Path" class="button">GitHub</a></li>
 									</ul>
 								</footer>								
 							</section>
