@@ -2453,10 +2453,9 @@ table.alt tbody tr td {
   border-color: rgba(255, 255, 255, 0.35);
 }
 
-/* Universal Tech Grid */
+/* Tech Grid */
 .tech-grid {
   display: grid;
-  /* Use auto-fit to handle responsiveness automatically */
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 2rem;
   width: 100%;
@@ -2475,17 +2474,17 @@ table.alt tbody tr td {
   cursor: pointer;
 }
 
-/* Hover Effect - Works on all screen sizes */
 .tech-grid i:hover {
   transform: scale(1.1);
-  color: #007bff; /* Optional: adds a color highlight on hover */
+  color: #007bff; 
 }
 
-/* Mobile Adjustments for Font Size Only */
+/* Mobile Adjustments */
 @media screen and (max-width: 736px) {
   .tech-grid {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 3rem;
   }
 
   .tech-grid i {
