@@ -2453,16 +2453,15 @@ table.alt tbody tr td {
   border-color: rgba(255, 255, 255, 0.35);
 }
 
-/* Tech Icons */
+/* Universal Tech Grid */
 .tech-grid {
   display: grid;
+  /* Use auto-fit to handle responsiveness automatically */
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 2rem;
   width: 100%;
-  padding: 0;
-  margin: 0;
-  align-items: center; 
-  justify-items: center; 
+  justify-items: center;
+  align-items: center;
 }
 
 .tech-grid i {
@@ -2473,35 +2472,29 @@ table.alt tbody tr td {
   align-items: center;
   justify-content: center;
   visibility: visible !important;
+  cursor: pointer;
 }
 
+/* Hover Effect - Works on all screen sizes */
 .tech-grid i:hover {
   transform: scale(1.1);
+  color: #007bff; /* Optional: adds a color highlight on hover */
 }
 
-/* Laptop Breakpoint */
-@media screen and (max-width: 1280px) {
-  .tech-grid {
-    padding-right: 2rem; 
-    grid-template-columns: repeat(3, 1fr); 
-  }
-}
-
-/* Mobile Breakpoint*/
+/* Mobile Adjustments for Font Size Only */
 @media screen and (max-width: 736px) {
   .tech-grid {
-    /* Reset padding and allow icons to wrap to 2 columns if needed */
-    padding-right: 0; 
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 1.5rem;
   }
 
   .tech-grid i {
-    font-size: 4rem !important;
+    font-size: 3.5rem !important;
   }
 
+  /* Specific fix for wordmark icons */
   .tech-grid .devicon-postman-plain-wordmark {
-    font-size: 4.5rem !important;
+    font-size: 4rem !important;
   }
 }
 
