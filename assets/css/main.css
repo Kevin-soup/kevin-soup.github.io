@@ -2461,6 +2461,7 @@ table.alt tbody tr td {
   width: 100%;
   justify-items: center;
   align-items: center;
+  margin-top: 4rem;
 }
 
 .tech-grid i {
@@ -2484,16 +2485,14 @@ table.alt tbody tr td {
   .tech-grid {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 1.5rem;
-    margin-bottom: 3rem;
   }
 
   .tech-grid i {
     font-size: 3.5rem !important;
   }
 
-  /* Specific fix for wordmark icons */
-  .tech-grid .devicon-postman-plain-wordmark {
-    font-size: 4rem !important;
+  #first .row > div:last-child {
+    margin-top: 5rem !important;
   }
 }
 
