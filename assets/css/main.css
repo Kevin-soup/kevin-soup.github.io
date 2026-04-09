@@ -2453,7 +2453,7 @@ table.alt tbody tr td {
   border-color: rgba(255, 255, 255, 0.35);
 }
 
-/* Tech Icons*/
+/* Tech Icons */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -2461,8 +2461,8 @@ table.alt tbody tr td {
   width: 100%;
   padding: 0;
   margin: 0;
-  align-items: center; /* Vertically aligns different sized icons */
-  justify-items: center; /* Horizontally centers them */
+  align-items: center; 
+  justify-items: center; 
 }
 
 .tech-grid i {
@@ -2479,10 +2479,29 @@ table.alt tbody tr td {
   transform: scale(1.1);
 }
 
+/* Laptop Breakpoint */
 @media screen and (max-width: 1280px) {
   .tech-grid {
-    padding-right: 2rem; /* Pushes icons away from the text */
-    grid-template-columns: repeat(3, 1fr); /* Forces 3 columns on laptops for better spacing */
+    padding-right: 2rem; 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+/* Mobile Breakpoint*/
+@media screen and (max-width: 736px) {
+  .tech-grid {
+    /* Reset padding and allow icons to wrap to 2 columns if needed */
+    padding-right: 0; 
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+    gap: 1.5rem;
+  }
+
+  .tech-grid i {
+    font-size: 4rem !important;
+  }
+
+  .tech-grid .devicon-postman-plain-wordmark {
+    font-size: 4.5rem !important;
   }
 }
 
