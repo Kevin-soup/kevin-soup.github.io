@@ -3,7 +3,7 @@
     @include vendor('display', 'flex');
     @include vendor('flex-wrap', 'wrap');
     @include vendor('justify-content', 'center');
-    @include vendor('align-items', 'stretch'); // Forces all boxes in a row to match height
+    @include vendor('align-items', 'stretch'); 
     width: calc(100% + #{_size(element-margin)});
     margin: 0 0 (_size(element-margin) * 1.5) (_size(element-margin) * -1);
     padding: 0;
@@ -11,7 +11,7 @@
 
     li {
         @include vendor('display', 'flex');        
-        @include vendor('flex-direction', 'column'); 
+        @include vendor('flex-direction', 'column'); // Stacks elements vertically
         width: calc(#{(100% / 3)} - #{_size(element-margin)});
         margin-left: _size(element-margin);
         margin-top: (_size(element-margin) * 1.5);
@@ -23,41 +23,42 @@
             margin-top: 0;
         }
 
-        // Force images to the same height to align the start of the titles
         .image.fit {
             margin-bottom: 2rem;
             img {
                 height: 200px;
                 object-fit: cover;
                 object-position: top;
+                width: 100%;
             }
         }
 
-        // Force titles to the same height to align the start of the body text
         h3 {
-            min-height: 4.5rem;
+            margin-bottom: 1rem;
+            min-height: 4.5rem; 
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
         }
 
-        // Keep paragraph margins consistent
-        p {
-            margin-bottom: 1.5rem;
+        // Makes button alignment independent of text 
+        .content-wrapper {
+            flex-grow: 1; 
+            margin-bottom: 2rem;
+            
+            p {
+                margin-bottom: 1rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
 
-        // Anchor "Learn More" buttons to the bottom
         .button {
-            margin-top: auto !important; 
+            margin-top: auto; 
             align-self: center;          
             display: inline-block;
             width: fit-content;
-            margin-bottom: 0;
-        }
-
-        > :last-child {
-            margin-bottom: 0;
         }
     }
 
@@ -77,9 +78,15 @@
             width: 100%;
             margin-left: 0;
             margin-top: _size(element-margin);
-            &:nth-child(2),
-            &:nth-child(3) {
-                margin-top: _size(element-margin);
+            
+            .content-wrapper {
+                flex-grow: 0;
+                margin-bottom: 1.5rem;
+            }
+
+            .button {
+                width: 100%;
+                text-align: center;
             }
         }
     }
