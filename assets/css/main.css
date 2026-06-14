@@ -470,45 +470,45 @@ button.disabled, button:disabled,
   opacity: 0.25;
 }
 
-/* Email variant (blue) */
-input[type=submit].email,
-input[type=reset].email,
-input[type=button].email,
-button.email,
-.button.email {
+/* Primary variant (blue) */
+input[type=submit].primary,
+input[type=reset].primary,
+input[type=button].primary,
+button.primary,
+.button.primary {
   background-color: #8cc9f0;
   color: #ffffff !important;
   box-shadow: none;
 }
-input[type=submit].email:hover,
-input[type=reset].email:hover,
-input[type=button].email:hover,
-button.email:hover,
-.button.email:hover {
+input[type=submit].primary:hover,
+input[type=reset].primary:hover,
+input[type=button].primary:hover,
+button.primary:hover,
+.button.primary:hover {
   background-color: rgb(153, 207, 242);
 }
-input[type=submit].email:active,
-input[type=reset].email:active,
-input[type=button].email:active,
-button.email:active,
-.button.email:active {
+input[type=submit].primary:active,
+input[type=reset].primary:active,
+input[type=button].primary:active,
+button.primary:active,
+.button.primary:active {
   background-color: rgb(126, 195, 238);
 }
-input[type=submit].email.icon:before,
-input[type=reset].email.icon:before,
-input[type=button].email.icon:before,
-button.email.icon:before,
-.button.email.icon:before {
+input[type=submit].primary.icon:before,
+input[type=reset].primary.icon:before,
+input[type=button].primary.icon:before,
+button.primary.icon:before,
+.button.primary.icon:before {
   color: #ffffff !important;
 }
 
-/* Demo (red) variant */
+/* Demo variant (red) */
 input[type=submit].demo,
 input[type=reset].demo,
 input[type=button].demo,
 button.demo,
 .button.demo {
-  background-color: #d9534f !important;
+  background-color: #ff6b6b !important;
   color: #ffffff !important;
   box-shadow: none !important;
 }
@@ -517,14 +517,21 @@ input[type=reset].demo:hover,
 input[type=button].demo:hover,
 button.demo:hover,
 .button.demo:hover {
-  background-color: #c9302c !important;
+  background-color: #ff8787 !important;
 }
 input[type=submit].demo:active,
 input[type=reset].demo:active,
 input[type=button].demo:active,
 button.demo:active,
 .button.demo:active {
-  background-color: #ac2925 !important;
+  background-color: #fa5252 !important;
+}
+input[type=submit].demo.icon:before,
+input[type=reset].demo.icon:before,
+input[type=button].demo.icon:before,
+button.demo.icon:before,
+.button.demo.icon:before {
+  color: #ffffff !important;
 }
 
 
@@ -1048,6 +1055,10 @@ table.alt tfoot { border-top: 0; }
   margin-left: 2em;
   margin-top: 3em;
   padding: 0;
+  
+  /* Flexbox alignment */
+  display: flex;
+  flex-direction: column;
 }
 .features li:nth-child(1),
 .features li:nth-child(2),
@@ -1069,6 +1080,11 @@ table.alt tfoot { border-top: 0; }
   object-fit: cover !important;
   object-position: top;
   border-radius: 8px;
+}
+
+/* Pushes buttons to bottom boundary */
+.features li .button {
+  margin-top: auto;
 }
 
 
