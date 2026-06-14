@@ -66,21 +66,18 @@ Computer Network I
 								<h2>Error Validation & ICMP Handling</h2>
 								<ul>
 									<li>
-										<strong>Packet Validation:</strong> Ensures integrity by verifying ICMP Echo Replies against 
+										<strong>Packet Validation:</strong> Verifies ICMP Echo Replies against 
 										original request identifiers, sequence numbers, and raw data payloads.
 									</li>
 									<li>
-										<strong>Network Metrics:</strong> Calculates high-resolution round-trip time (RTT) statistics, 
-										including minimum, maximum, and average values, alongside real-time packet loss percentages.
+										<strong>Network Metrics:</strong> Calculates round-trip time (RTT) statistics, 
+										including minimum, maximum, average values, and real time packet loss percentages.
 									</li>
 									<li>
-										<strong>ICMP Error Parsing:</strong> Implements a response handler for standard ICMP types and codes, 
-										diagnosing Echo Replies (Type 0), Destination Unreachable (Type 3), and Time Exceeded (Type 11).
+										<strong>ICMP Error Parsing:</strong> Response handler for standard ICMP including: 
+										Echo Replies (Type 0), Destination Unreachable (Type 3), and Time Exceeded (Type 11).
 									</li>
-									<li>
-										<strong>System Integrity:</strong> Utilizes debug messaging to compare expected versus actual packet 
-										values, confirming the accuracy of received network data.
-									</li>
+
 								</ul>
 								<footer class="major">
 									<ul class="actions special">

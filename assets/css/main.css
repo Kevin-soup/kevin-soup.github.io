@@ -246,6 +246,18 @@ input, select, textarea {
   color: #ffffff;
 }
 
+/* Inline text demo color */
+a.text.demo,
+#main a.text.demo {
+  color: #ff6b6b !important;
+  font-weight: 400;
+  text-decoration: none;
+}
+a.text.demo:hover,
+#main a.text.demo:hover {
+  color: #ff8787 !important;
+  text-decoration: underline;
+}
 
 /* ==========================================================================
    5. LAYOUT GRID (.row)
@@ -402,6 +414,9 @@ button,
   text-decoration: none;
   white-space: nowrap;
 
+  /* Space above buttons */
+  margin-top: 3.5em !important;
+
   /* Default (ghost) style */
   background-color: transparent;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
@@ -475,24 +490,32 @@ input[type=submit].primary,
 input[type=reset].primary,
 input[type=button].primary,
 button.primary,
-.button.primary {
-  background-color: #8cc9f0;
+.button.primary,
+a.button.primary,
+#main a.button.primary {
+  background-color: #8cc9f0 !important;
   color: #ffffff !important;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 input[type=submit].primary:hover,
 input[type=reset].primary:hover,
 input[type=button].primary:hover,
 button.primary:hover,
-.button.primary:hover {
-  background-color: rgb(153, 207, 242);
+.button.primary:hover,
+a.button.primary:hover,
+#main a.button.primary:hover {
+  background-color: rgb(153, 207, 242) !important;
+  color: #ffffff !important;
 }
 input[type=submit].primary:active,
 input[type=reset].primary:active,
 input[type=button].primary:active,
 button.primary:active,
-.button.primary:active {
-  background-color: rgb(126, 195, 238);
+.button.primary:active,
+a.button.primary:active,
+#main a.button.primary:active {
+  background-color: rgb(126, 195, 238) !important;
+  color: #ffffff !important;
 }
 input[type=submit].primary.icon:before,
 input[type=reset].primary.icon:before,
@@ -507,8 +530,10 @@ input[type=submit].demo,
 input[type=reset].demo,
 input[type=button].demo,
 button.demo,
-.button.demo {
-  background-color: #ff6b6b !important;
+.button.demo,
+a.button.demo,
+#main a.button.demo {
+  background-color: #f58f8f !important;
   color: #ffffff !important;
   box-shadow: none !important;
 }
@@ -516,15 +541,21 @@ input[type=submit].demo:hover,
 input[type=reset].demo:hover,
 input[type=button].demo:hover,
 button.demo:hover,
-.button.demo:hover {
-  background-color: #ff8787 !important;
+.button.demo:hover,
+a.button.demo:hover,
+#main a.button.demo:hover {
+  background-color: #f58f8f !important;
+  color: #ffffff !important;
 }
 input[type=submit].demo:active,
 input[type=reset].demo:active,
 input[type=button].demo:active,
 button.demo:active,
-.button.demo:active {
-  background-color: #fa5252 !important;
+.button.demo:active,
+a.button.demo:active,
+#main a.button.demo:active {
+  background-color: #f58f8f !important;
+  color: #ffffff !important;
 }
 input[type=submit].demo.icon:before,
 input[type=reset].demo.icon:before,
@@ -1084,7 +1115,13 @@ table.alt tfoot { border-top: 0; }
 
 /* Pushes buttons to bottom boundary */
 .features li .button {
-  margin-top: auto;
+  margin-top: auto !important;
+  align-self: center;
+}
+
+/* 2. Push down from the tech stack tags and give descriptions a standard layout */
+.features li p {
+  margin-bottom: 2.5em !important; 
 }
 
 
