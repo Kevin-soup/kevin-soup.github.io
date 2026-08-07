@@ -1,7 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-Default Homepage.
--->
+<!-- Default Homepage -->
 <html>
 	<head>
 		<!-- Google Analytics -->
@@ -14,6 +12,7 @@ Default Homepage.
           gtag('config', 'G-K5ZSM87ZBQ');
         </script>
 
+		<!-- Browser Title -->
 		<title>Kevin Lin's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -45,16 +44,16 @@ Default Homepage.
 					<nav id="nav">
 						<ul>
 							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">Worked With</a></li>
-							<li><a href="#second">Projects</a></li>
-							<li><a href="#cta">Get In Touch</a></li>
+							<li><a href="#techstack">Worked With</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#contact">Get In Touch</a></li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 
-						<!-- #Introduction -->
+						<!-- Introduction -->
 							<section id="intro" class="main">
 								<div class="spotlight">
 									<div class="content">
@@ -83,8 +82,8 @@ Default Homepage.
 								</div>
 							</section>
 
-						<!-- #First - Have Worked With -->
-							<section id="first" class="main">
+						<!-- Have Worked With -->
+							<section id="techstack" class="main">
 
 								<div class="container">
 									<div class="row gtr-150">
@@ -126,22 +125,35 @@ Default Homepage.
 								</div>
 							</section>
 
-						<!-- #Second - Projects -->
-							<section id="second" class="main special">
+						<!-- Projects -->
+							<section id="projects" class="main special">
 								<header class="major">
 									<h2>Latest Projects</h2>
 								</header>
 								<ul class="features">
+									<!-- Travel Planner -->
+									<li>
+										<span class="image fit"><img src="assets/images/homepage/travel.png"/></span>
+										<h3>Crowd-Sourced Travel Planner</h3>
+										<p><strong>FastAPI | Google Cloud | Cloudinary</strong></p>
+										<p><a href="https://travelplanner-129337949325.us-central1.run.app/home" target="_blank" 
+											rel="noopener noreferrer" class="text demo">[LIVE DEMO]</a>										
+                                        Collaborated with a team to build a travel application, where I implemented 
+										the FastAPI REST backend and GCP deployment pipeline.</p>
+										<a href="projects/travel_planner.html" class="button">Learn More</a>										
+									</li>
+									<!-- Database Management System -->									
 									<li>
 										<span class="image fit"><img src="assets/images/homepage/database.png"/></span>
-										<h3>Database ManagementSystem</h3>
+										<h3>Database Management System</h3>
 										<p><strong>Next.js | Prisma | PostgreSQL | Vercel</strong></p>
 										<p><a href="https://sunglasses-management-system.vercel.app/" target="_blank" 
 											rel="noopener noreferrer" class="text demo">[LIVE DEMO]</a>
 											Developed a full stack CRUD application focusing on relational schema design 
 											and data management for product inventory.</p>
 										<a href="projects/database_project.html" class="button">Learn More</a>									
-									</li>									
+									</li>	
+									<!-- TraceRoute -->																	
 									<li>
 										<span class="image fit"><img src="assets/images/homepage/traceroute.png"/></span>
 										<h3>TraceRoute Network Path</h3>
@@ -150,19 +162,11 @@ Default Homepage.
 											calculates latency using TTL manipulation and ICMP error reporting.</p>
 										<a href="projects/traceroute_project.html" class="button">Learn More</a>
 									</li>
-									<li>
-										<span class="image fit"><img src="assets/images/homepage/microservice.png"/></span>
-										<h3>Microservice Catalog App</h3>
-										<p><strong>MongoDB | Express | React | Node.js</strong></p>
-										<p>Created a distributed system architecture using four independent microservices 
-											that communicate via REST APIs.</p>
-										<a href="projects/microservice_project.html" class="button">Learn More</a>										
-									</li>
 								</ul>
 							</section>
 
-						<!-- #Cta - Get In Touch -->
-							<section id="cta" class="main special">
+						<!-- Get In Touch -->
+							<section id="contact" class="main special">
 								<header class="major">
 									<h2>Connect With Me:</h2>
 									<p></p>
