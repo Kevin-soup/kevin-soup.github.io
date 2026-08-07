@@ -78,7 +78,6 @@
 		z-index: -1;
 
 		& + label {
-			@include icon(false, solid);
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
